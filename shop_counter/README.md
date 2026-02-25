@@ -1,68 +1,60 @@
-# Group 8 Python Project
-## The Shop Counter
+# Group 8 Python Project - Shop Counter
 
-### Project Overview
-This is our group project for Python. We called it **Shop Counter**.  
-The idea is simple: show products, buy items, reduce stock, and keep a record of sales.  
-It’s just for practice and learning, not a real shop.
+## Project Overview
+Briefly describe your project:
+- What it does (show products, buy items, reduce stock, keep sales history)
+- Why you built it (learning Python, OOP, CLI, persistence)
+- Any extra goals (practice teamwork, Git workflow)
 
----
+## Features
+List the main functionalities:
+- Show available products with prices and stock
+- Buy items and automatically update stock
+- Save each sale to a file for persistence
+- View past sales history
 
-### Work Division
-We split the work so everyone has a clear role:
+## User Roles / Team Responsibilities
 - Person A → data.py (products and prices)
 - Person B → inventory.py (show products, update stock)
 - Person C → sales.py (buy items, save sales)
 - Person D → main.py (menu and connects everything)
 - Person E → tests + README (testing and documentation)
 
----
+## Project Structure
+List the main files and their purpose:
+## How to Run
+Explain step-by-step:
+1. Open terminal or command prompt
+2. Navigate to project folder
+3. Run: `python -m shop_counter.main`
+4. Follow the menu to show products, buy items, or view sales
 
-### Workflow
-1. Manager created the repo and added starter files.  
-2. Each member forked the repo and cloned it.  
-3. Everyone worked only on their file.  
-4. After finishing, they committed and pushed.  
-5. Then they opened a Pull Request.  
-6. Manager merged everything.  
-7. Finally, we tested and wrote the README.
+## How to Test
+Explain how to run tests:
+- Inventory tests: `pytest tests/test_inventory.py`
+- Sales tests: `pytest tests/test_sales.py`
+- Briefly explain what each test checks (stock reduction, invalid product, sales file)
 
----
+## Technologies Used
+- Python 3.x
+- JSON for sales persistence
+- Git for version control
 
-### Fork Flow (Simple)
-- Fork once → copy the repo to your GitHub.  
-- Clone once → bring it to your computer.  
-- Pull before coding → get the latest changes.  
-- Commit + Push → save your work.  
-- PR → send changes back to manager.  
+## Workflow / Git Process
+- Each member forked the repo, cloned it, worked on their file
+- Committed and pushed changes
+- Created Pull Requests to merge into main branch
+- Used a branching workflow to keep work organized
 
----
+## Optional: Learning Outcomes
+- Modular Python design
+- OOP concepts
+- File-based persistence
+- CLI interface development
+- Team collaboration and Git workflow
+### How to Run Tests
+From the project root:
 
-### Project Flow (How It Works)
-1. **Start program** → run `python -m shop_counter.main`.  
-2. **Menu appears** with options:
-   - Show Products
-   - Buy Item
-   - View Sales History
-   - Exit
-3. **Show Products** → lists items, prices, and stock.  
-4. **Buy Item** → reduces stock, calculates total price, and saves the sale.  
-5. **View Sales History** → shows all past purchases saved in `sales_history.json`.  
-6. **Exit** → closes the program.
-
----
-
-### Tasks the Project Handles
-- Keep a list of products and their prices.  
-- Show available products to the user.  
-- Update stock when items are bought.  
-- Save sales into a file for record keeping.  
-- Display past sales history.  
-- Run simple tests to check if stock updates correctly.
-
----
-
-### How to Run
-Run the project with:
 ```bash
-python -m shop_counter.main
+export PYTHONPATH=$(pwd)
+pytest tests/
